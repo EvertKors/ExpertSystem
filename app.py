@@ -71,6 +71,7 @@ class Greetings(KnowledgeEngine):
           Fact(wr_temp=True))
     def advice_1(self):
         print("ADVICE: A headache with wrong temperature is not good, please consult a doctor")
+        self.declare(Fact(advice=True))
 
     @Rule(Fact(action='advice'),
           Fact(wr_age_group=False),
@@ -78,6 +79,7 @@ class Greetings(KnowledgeEngine):
     def advice_2(self):
         print(
             "ADVICE: You are in a good age group, if your temperature does not fall within 2 days, please consult a doctor")
+        self.declare(Fact(advice=True))
 
     @Rule(Fact(action='advice'),
           Fact(winter=True),
@@ -85,6 +87,13 @@ class Greetings(KnowledgeEngine):
     def advice_3(self):
         print(
             "ADVICE: In the winter a chance of sickness is higher, don't worry about your wrong temperature")
+
+    @Rule(Fact(action='advice'),
+          Fact(winter=True),
+          Fact(wr_age_group=True))
+    def advice_4(self):
+        print(
+            "ADVICE: In the winter and in your age group there is a higher chance of sickness, please consult a doctor.")
 
 engine = Greetings()
 engine.reset()  # Prepare the engine for the execution.
