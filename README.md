@@ -22,7 +22,8 @@ De eerste functie met de DefFacts annotation bepaalt welke facts het engine nodi
 
 
 
-
+## Sources
+- https://pyknow.readthedocs.io/en/stable/introduction.html
 
 
 
