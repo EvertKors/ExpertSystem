@@ -24,7 +24,7 @@ De eerste functie met de DefFacts annotation bepaalt welke facts het engine nodi
 
 ## Sources
 - https://pyknow.readthedocs.io/en/stable/introduction.html
-
+- https://github.com/Fcmam5/kr-and-expert-system/tree/master/expert-system-children_diabetes
 
 
 
